@@ -1,25 +1,14 @@
 import React, {useState} from 'react'
-import { useDispatch } from 'react-redux'
-import {changeToDoAction, removeToDoAction} from '../redux/action/actions'
 
 
-const ToDos = ({todoArr}) => {
+const ToDos = ({todoArr, handleStatus, handleDelete}) => {
 
-    const dispatch = useDispatch()
   
     const handleSubmit = (e) => {
       e.preventDefault()
     }
 
-  const handleStatus = (id) => {
-    // e.preventDefault()
-    dispatch(changeToDoAction(id))
-    // setStatus('')
-  }
 
-  const handleDelete = (id) => {
-    dispatch(removeToDoAction(id))
-  }
 
   return (
       <div className="collection">
