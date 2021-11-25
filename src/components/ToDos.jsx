@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 
 const ToDos = ({todoArr, handleStatus, handleDelete}) => {
@@ -24,7 +24,7 @@ const ToDos = ({todoArr, handleStatus, handleDelete}) => {
                 <a
                   href="#~"
                   className="secondary-content"
-                  onSubmit={handleSubmit}
+                  // onSubmit={handleSubmit}
                   onClick={() => handleDelete(todo.id)}
                 >
                   <i className="material-icons red-text text-accent-1">delete</i>

@@ -14,7 +14,6 @@ const TodoList = () => {
 
     const todoArr = useSelector((state) => state.toDoList)
 
-
     const dispatch = useDispatch()
 
     const handleStatus = (id) => {
