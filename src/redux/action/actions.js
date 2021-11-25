@@ -9,3 +9,7 @@ export const newToDoAction = (content) => {
 export const changeToDoAction = (id) => {
     return {type: DONE_TO_DO, payload: id }
 }
+
+export const removeToDoAction = (id) => {
+    return {type: REMOVE_TO_DO, payload: id }
+}

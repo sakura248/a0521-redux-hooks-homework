@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid'
-import { NEW_TO_DO, DONE_TO_DO } from '../action/actions'
+import { NEW_TO_DO, DONE_TO_DO, REMOVE_TO_DO } from '../action/actions'
 
 const initState = {
     toDoList: [
@@ -25,6 +25,7 @@ const todosReducer = (state = initState, action) => {
             }
         
         case DONE_TO_DO:
+            // list style
             return {
                 ...state,
                 toDoList: state.toDoList.map((todo) => {
@@ -35,6 +36,11 @@ const todosReducer = (state = initState, action) => {
                         };
                         }),
                 };
+
+        case REMOVE_TO_DO:
+            return {
+                ...state
+            }
 
         default:
             return state;
