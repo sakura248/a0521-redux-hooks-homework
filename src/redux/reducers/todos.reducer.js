@@ -5,10 +5,10 @@ const initState = {
     toDoList: [
         { id: uuidv4(), content: "Buy Bread", isDone: false },
         { id: uuidv4(), content: "Buy Milk", isDone: true },
-        { id: uuidv4(), content: "Buy Milk", isDone: false },
-        { id: uuidv4(), content: "Buy Milk", isDone: false },
-        { id: uuidv4(), content: "Buy water", isDone: false },
-        { id: uuidv4(), content: "Buy Milk", isDone: false },
+        // { id: uuidv4(), content: "Buy Milk", isDone: false },
+        // { id: uuidv4(), content: "Buy Milk", isDone: false },
+        // { id: uuidv4(), content: "Buy water", isDone: false },
+        // { id: uuidv4(), content: "Buy Milk", isDone: false },
     ]
 }
 
@@ -25,7 +25,6 @@ const todosReducer = (state = initState, action) => {
             }
         
         case DONE_TO_DO:
-            // list style
             return {
                 ...state,
                 toDoList: state.toDoList.map((todo) => {
