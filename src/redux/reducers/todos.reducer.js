@@ -39,13 +39,15 @@ const todosReducer = (state = initState, action) => {
 
         case REMOVE_TO_DO:
             return {
-                ...state
+                ...state,
+                toDoList: state.toDoList.filter((todo) => 
+                    todo.id !== action.payload
+                ),
             }
 
         default:
             return state;
     }
-
 }
 
 export default todosReducer

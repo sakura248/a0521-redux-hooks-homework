@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useDispatch } from 'react-redux'
-import {changeToDoAction} from '../redux/action/actions'
+import {changeToDoAction, removeToDoAction} from '../redux/action/actions'
 
 
 const ToDos = ({todoArr}) => {
@@ -11,10 +11,14 @@ const ToDos = ({todoArr}) => {
       e.preventDefault()
     }
 
-  const handleStatus = (status) => {
+  const handleStatus = (id) => {
     // e.preventDefault()
-    dispatch(changeToDoAction(status))
+    dispatch(changeToDoAction(id))
     // setStatus('')
+  }
+
+  const handleDelete = (id) => {
+    dispatch(removeToDoAction(id))
   }
 
   return (
@@ -32,7 +36,7 @@ const ToDos = ({todoArr}) => {
                   href="#~"
                   className="secondary-content"
                   onSubmit={handleSubmit}
-                  onClick={() => {}}
+                  onClick={() => handleDelete(todo.id)}
                 >
                   <i className="material-icons red-text text-accent-1">delete</i>
                 </a>
